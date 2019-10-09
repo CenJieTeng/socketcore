@@ -1,0 +1,6 @@
+lua53.exe
+
+*.lib
+*.dll
+*.exp
+*.lnk
