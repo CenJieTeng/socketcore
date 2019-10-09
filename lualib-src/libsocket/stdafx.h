@@ -36,6 +36,5 @@ extern "C" {
 #include <boost/property_tree/json_parser.hpp>
 #include "../cjson/tools.h"
 #include "message.hpp"
-#include "message.pb.h"
 #include "socket.h"
 #include "session.h"
