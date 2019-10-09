@@ -2,7 +2,6 @@
 #ifndef MESSAGE_HPP
 #define MESSAGE_HPP
 #include "stdafx.h"
-#include "message.pb.h"
 
 enum class MessageType : uint8_t {
 	JSON = 1,
