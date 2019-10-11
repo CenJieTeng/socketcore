@@ -5,11 +5,13 @@
 
 #pragma once
 
+#ifdef _WIN32
 #include "targetver.h"
 
 #define WIN32_LEAN_AND_MEAN             // 从 Windows 头文件中排除极少使用的内容
 // Windows 头文件
 #include <windows.h>
+#endif
 
 #pragma warning(disable : 4996)
 
@@ -30,11 +32,10 @@ extern "C" {
 #include <deque>
 #include <unordered_map>
 #include <unordered_set>
-#include <sol/sol.hpp>
+#include <../third/sol/sol.hpp>
 #include <boost/asio.hpp>
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
-#include "../cjson/tools.h"
 #include "message.hpp"
 #include "socket.h"
 #include "session.h"
