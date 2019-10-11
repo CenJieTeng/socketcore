@@ -1,6 +1,18 @@
-lua53.exe
+//vague
+*.vcxproj
+*.filters
+*.user
+*.proto
+*.props
 
-*.lib
-*.dll
-*.exp
-*.lnk
+
+//field
+socketcore.sln
+
+//dir
+.vs/
+cjson/
+client/
+Debug/
+Project1/
+test/

@@ -1,7 +1,0 @@
-{
-    "Lua.diagnostics.disable": [
-        "empty-block",
-        "ambiguity-1",
-        "undefined-global"
-    ]
-}
