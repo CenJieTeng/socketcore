@@ -2,13 +2,18 @@
 //
 
 #include "stdafx.h"
+#include "socket.h"
+#include "session.h"
 #include "mytimer.hpp"
 #include "database.hpp"
 
 extern "C" {
 
 	//lua入口函数
-	__declspec(dllexport) int luaopen_socketcore(lua_State *L) {
+	#ifdef _WIN32
+	__declspec(dllexport)
+	#endif
+	int luaopen_socketcore(lua_State *L) {
 		sol::state_view *sv = new sol::state_view(L);
 		sol::table module = sv->create_table(); //创建表
 

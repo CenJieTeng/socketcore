@@ -1,6 +1,7 @@
 ﻿#ifndef SESSION_H
 #define SESSION_H
 #include "stdafx.h"
+#include "message.hpp"
 using boost::asio::ip::tcp;
 using namespace boost::property_tree;
 

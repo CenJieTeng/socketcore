@@ -1,6 +1,7 @@
 ﻿#ifndef SOCKET_H
 #define SOCKET_H
 #include "stdafx.h"
+#include "session.h"
 using boost::asio::ip::tcp;
 class Session;
 using session_ptr = std::shared_ptr<Session>;

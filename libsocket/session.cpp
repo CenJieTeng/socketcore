@@ -1,4 +1,5 @@
-﻿#include "stdafx.h"
+﻿#include "session.h"
+#include "message.hpp"
 
 std::map<std::string, std::function<void(session_ptr)>> Session::cbs_;
 
