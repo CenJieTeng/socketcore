@@ -3,6 +3,7 @@
 #include <iostream>
 #include <cassert>
 #include <mysql.h>
+#include <stdexcept>
 
 class DataBase {
 public:
@@ -27,14 +28,14 @@ public:
 		//连接到数据库
 		if (!mysql_real_connect(&connection_, host, user, password, table,
 			port, 0, CLIENT_FOUND_ROWS)) {
-			throw(std::exception(mysql_error(&connection_)));
+			throw(std::logic_error(mysql_error(&connection_)));
 		}
 	}
 
 	//一般查询
 	void query(const char *que) {
 		if (mysql_query(&connection_, que)) {
-			throw(std::exception(mysql_error(&connection_)));
+			throw(std::logic_error(mysql_error(&connection_)));
 		}
 	}
 
@@ -46,7 +47,7 @@ public:
 				mysql_free_result(res_);
 			}
 			if ((res_ = mysql_use_result(&connection_)) == nullptr) {
-				throw(std::exception(mysql_error(&connection_)));
+				throw(std::logic_error(mysql_error(&connection_)));
 			}
 			return fetch_row(nullptr);
 		}
