@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+﻿#include "socket.h"
 
 using namespace boost::property_tree;
 //消息最大长度
