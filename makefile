@@ -16,7 +16,7 @@ OBJS = $(SOURCES:.cpp=.o)
 
 socketcore.so: $(OBJS)
 	$(XX) -g -$(STD) -L=/usr/local/lib64 -L=usr/lib64/mysql $(OBJS) \
-	/usr/local/lib64/liblua53.a /usr/local/lib/libboost_system.a  -lmysqlclient -shared -o socketcore.so
+	-llua53 -lboost_system -lmysqlclient -shared -o socketcore.so
 
 clean:
 	rm -rf $(SRC_DIR)/*.o socketcore.so
