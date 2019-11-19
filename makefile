@@ -15,7 +15,7 @@ OBJS = $(SOURCES:.cpp=.o)
 	$(XX) -c -$(STD) -I$(LUA_DIR) -I$(MYSQL_DIR) -I$(THIRD_DIR) $< -fPIC -o $@
 
 socketcore.so: $(OBJS)
-	$(XX) -g -$(STD) -L=/usr/local/lib64 -L=usr/lib64/mysql $(OBJS) \
+	$(XX) -g -$(STD) -L=/usr/local/lib64 -L=/usr/lib64/mysql $(OBJS) \
 	-llua53 -lboost_system -lmysqlclient -shared -o socketcore.so
 
 clean:
